@@ -9,7 +9,7 @@
 
 <channel>
 	<title>Responsive gym website</title>
-	<atom:link href="http://localhost/gym/feed/?simply_static_page=387" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost/gym/feed/?simply_static_page=800" rel="self" type="application/rss+xml" />
 	<link></link>
 	<description></description>
 	<lastBuildDate>Tue, 04 Jul 2023 18:16:26 +0000</lastBuildDate>
