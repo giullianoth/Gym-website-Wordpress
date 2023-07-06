@@ -133,7 +133,43 @@ img.emoji {
 { margin: 0; }
 
 .b_pricing_basic_package ul li:nth-child(3), .b_pricing_basic_package ul li:nth-child(4), .b_pricing_basic_package ul li:nth-child(5), .b_pricing_premium_package ul li:nth-child(4), .b_pricing_premium_package ul li:nth-child(5)
-{ opacity: 0.3 !important; }</style>
+{ opacity: 0.3 !important; }
+
+.b_pricing_plan_button .elementor-button
+{ width: 100%; }
+
+/* Calculate BMI section */
+.b_calculate_form .elementor-widget-container
+{ display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 20px; }
+
+.b_calculate_form_box
+{ flex-basis: calc(50% - 10px); position: relative; border: 2px solid hsl(79, 97%, 77%); }
+
+@media screen and (max-width: 1024px)
+{ .b_calculate_form_box { flex-basis: 100%; } }
+
+.b_calculate_input
+{ width: 100%; background: transparent;
+padding: 20px 56px 20px 24px !important; outline: none; border: none !important; color: hsl(180, 3%, 72%); }
+
+.b_calculate_input::-webkit-outer-spin-button, .b_calculate_input::-webkit-inner-spin-button
+{ -webkit-appearance: none;
+margin: 0; }
+
+.b_calculate_input[type=number]
+{ -moz-appearance: textfield; }
+
+.b_calculate_form_label
+{ position: absolute; right: 1.5rem; top: 1.25rem; color: hsl(0, 0%, 98%); }
+
+.b_calculate_button .elementor-button
+{ width: 100%; }
+
+.b_calculate_message .elementor-widget-container p.color-green
+{ color: hsl(79, 72%, 55%) !important; }
+
+.b_calculate_message .elementor-widget-container p.color-red
+{ color: hsl(0, 80%, 64%) !important; }</style>
 		</head>
 
 <body class="post-template-default single single-post postid-1 single-format-standard ehf-header ehf-template-hello-elementor ehf-stylesheet-hello-elementor elementor-default elementor-kit-5">
@@ -306,6 +342,11 @@ const mobileMenu = document.querySelector(".j_mobile_menu .hfe-side")
 const openMenuButton = document.querySelector(".j_mobile_menu .hfe-nav-menu__toggle")
 const closeMenuButton = document.querySelector(".j_mobile_menu .hfe-flyout-close")
 
+const calcCm = document.querySelector(".j_calculate_height")
+const calcKg = document.querySelector(".j_calculate_weight")
+const calcBtn = document.querySelector(".j_calculate_button .elementor-button")
+const calcMsg = document.querySelector(".j_calculate_message .elementor-widget-container")
+
 // Home section margin top
 homeSection.style.marginTop = `${headerSection.offsetHeight + 70}px`
 
@@ -321,6 +362,32 @@ openMenuButton.onclick = () => {
   }, 100)
 }
 closeMenuButton.onclick = () => mobileMenu.classList.remove("show")
+
+// Calculate BMI
+const calculateBmi = event => {
+  event.preventDefault()
+  if (calcCm.value === "" || calcKg.value === "") {
+    calcMsg.innerHTML = "<p class='color-red'>Fill in the Height and Weight<\/p>"   
+    setTimeout(() => calcMsg.innerHTML = "", 3000)
+  } else {
+    let cm = parseFloat(calcCm.value) / 100
+    let kg = parseFloat(calcKg.value)
+    let bmi = Math.round(kg / (cm * cm))
+    
+    if (bmi < 18.5) {
+      calcMsg.innerHTML = `<p class='color-green'>Your BMI is ${bmi} and you are skinny<\/p>` 
+    } else if (bmi >= 18.5 && bmi < 25) {
+      calcMsg.innerHTML = `<p class='color-green'>Your BMI is ${bmi} and you are healthy<\/p>` 
+    } else {
+      calcMsg.innerHTML = `<p class='color-green'>Your BMI is ${bmi} and you are overweight<\/p>`
+    }
+    
+    calcCm.value = ""
+    calcKg.value = ""
+    setTimeout(() => calcMsg.innerHTML = "", 3000)
+  }
+}
+calcBtn.onclick = calculateBmi
 
 setHeaderBackground()
 window.onscroll = setHeaderBackground</script>

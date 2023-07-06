@@ -385,7 +385,7 @@
 		media="all">
 	<link rel="stylesheet" id="elementor-global-css" href="/wp-content/uploads/elementor/css/global.css?ver=1688580027"
 		media="all">
-	<link rel="stylesheet" id="elementor-post-8-css" href="/wp-content/uploads/elementor/css/post-8.css?ver=1688658816"
+	<link rel="stylesheet" id="elementor-post-8-css" href="/wp-content/uploads/elementor/css/post-8.css?ver=1688672319"
 		media="all">
 	<link rel="stylesheet" id="hfe-widgets-style-css"
 		href="/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.6.14" media="all">
@@ -536,6 +536,68 @@
 		.b_pricing_premium_package ul li:nth-child(4),
 		.b_pricing_premium_package ul li:nth-child(5) {
 			opacity: 0.3 !important;
+		}
+
+		.b_pricing_plan_button .elementor-button {
+			width: 100%;
+		}
+
+		/* Calculate BMI section */
+		.b_calculate_form .elementor-widget-container {
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: 10px;
+			column-gap: 20px;
+		}
+
+		.b_calculate_form_box {
+			flex-basis: calc(50% - 10px);
+			position: relative;
+			border: 2px solid hsl(79, 97%, 77%);
+		}
+
+		@media screen and (max-width: 1024px) {
+			.b_calculate_form_box {
+				flex-basis: 100%;
+			}
+		}
+
+		.b_calculate_input {
+			width: 100%;
+			background: transparent;
+			padding: 20px 56px 20px 24px !important;
+			outline: none;
+			border: none !important;
+			color: hsl(180, 3%, 72%);
+		}
+
+		.b_calculate_input::-webkit-outer-spin-button,
+		.b_calculate_input::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		.b_calculate_input[type=number] {
+			-moz-appearance: textfield;
+		}
+
+		.b_calculate_form_label {
+			position: absolute;
+			right: 1.5rem;
+			top: 1.25rem;
+			color: hsl(0, 0%, 98%);
+		}
+
+		.b_calculate_button .elementor-button {
+			width: 100%;
+		}
+
+		.b_calculate_message .elementor-widget-container p.color-green {
+			color: hsl(79, 72%, 55%) !important;
+		}
+
+		.b_calculate_message .elementor-widget-container p.color-red {
+			color: hsl(0, 80%, 64%) !important;
 		}
 	</style>
 </head>
@@ -1392,7 +1454,7 @@
 										</ul>
 									</div>
 								</div>
-								<div class="elementor-element elementor-element-1bbf02e b_button elementor-align-center elementor-widget elementor-widget-button"
+								<div class="elementor-element elementor-element-1bbf02e b_button b_pricing_plan_button elementor-align-center elementor-widget elementor-widget-button"
 									data-id="1bbf02e" data-element_type="widget" data-widget_type="button.default">
 									<div class="elementor-widget-container">
 										<div class="elementor-button-wrapper">
@@ -1467,7 +1529,7 @@
 										</ul>
 									</div>
 								</div>
-								<div class="elementor-element elementor-element-3d30f6d b_button elementor-align-center elementor-widget elementor-widget-button"
+								<div class="elementor-element elementor-element-3d30f6d b_button b_pricing_plan_button elementor-align-center elementor-widget elementor-widget-button"
 									data-id="3d30f6d" data-element_type="widget" data-widget_type="button.default">
 									<div class="elementor-widget-container">
 										<div class="elementor-button-wrapper">
@@ -1542,7 +1604,7 @@
 										</ul>
 									</div>
 								</div>
-								<div class="elementor-element elementor-element-86a5dca b_button elementor-align-center elementor-widget elementor-widget-button"
+								<div class="elementor-element elementor-element-86a5dca b_button b_pricing_plan_button elementor-align-center elementor-widget elementor-widget-button"
 									data-id="86a5dca" data-element_type="widget" data-widget_type="button.default">
 									<div class="elementor-widget-container">
 										<div class="elementor-button-wrapper">
@@ -1557,6 +1619,85 @@
 										</div>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="elementor-element elementor-element-bd4f3cf e-flex e-con-boxed e-con" data-id="bd4f3cf"
+				data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+				<div class="e-con-inner">
+					<div class="elementor-element elementor-element-6dd30ba e-con-full e-flex e-con" data-id="6dd30ba"
+						data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+						<div class="elementor-element elementor-element-08b4ff9 elementor-widget__width-auto b_title elementor-widget elementor-widget-heading"
+							data-id="08b4ff9" data-element_type="widget" data-widget_type="heading.default">
+							<div class="elementor-widget-container">
+								<h2 class="elementor-heading-title elementor-size-default">
+									<span>Calculate</span> your bmi
+								</h2>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-f6d4407 elementor-widget elementor-widget-text-editor"
+							data-id="f6d4407" data-element_type="widget" data-widget_type="text-editor.default">
+							<div class="elementor-widget-container">
+								<p>The body mass index (BMI) calculator calculates body mass index from your weight and
+									height.</p>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-acc7e6e e-con-full e-flex e-con"
+							data-id="acc7e6e" data-element_type="container"
+							data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+							<div class="elementor-element elementor-element-52801c7 b_calculate_form elementor-widget elementor-widget-html"
+								data-id="52801c7" data-element_type="widget" data-widget_type="html.default">
+								<div class="elementor-widget-container">
+									<div class="b_calculate_form_box">
+										<input type="number" placeholder="Height"
+											class="b_calculate_input j_calculate_height" id="height">
+										<label for="height" class="b_calculate_form_label">cm</label>
+									</div>
+
+									<div class="b_calculate_form_box">
+										<input type="number" placeholder="Weight"
+											class="b_calculate_input j_calculate_weight" id="weight">
+										<label for="weight" class="b_calculate_form_label">kg</label>
+									</div>
+								</div>
+							</div>
+							<div class="elementor-element elementor-element-de7b938 b_button b_calculate_button j_calculate_button elementor-widget elementor-widget-button"
+								data-id="de7b938" data-element_type="widget" data-widget_type="button.default">
+								<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
+											<span class="elementor-button-content-wrapper">
+												<span class="elementor-button-icon elementor-align-icon-right">
+													<i aria-hidden="true" class="fas fa-arrow-right"></i> </span>
+												<span class="elementor-button-text">Calculate Now</span>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="elementor-element elementor-element-ab289b2 e-con-full e-flex e-con"
+							data-id="ab289b2" data-element_type="container"
+							data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+							<div class="elementor-element elementor-element-e50bff6 b_calculate_message j_calculate_message elementor-absolute e-transform elementor-widget elementor-widget-text-editor"
+								data-id="e50bff6" data-element_type="widget"
+								data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_transform_translateY_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;10&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_widescreen&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_tablet_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_widescreen&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_tablet_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
+								data-widget_type="text-editor.default">
+								<div class="elementor-widget-container">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-6a8bdf3 e-con-full e-flex e-con" data-id="6a8bdf3"
+						data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+						<div class="elementor-element elementor-element-c0772d7 elementor-widget elementor-widget-image"
+							data-id="c0772d7" data-element_type="widget" data-widget_type="image.default">
+							<div class="elementor-widget-container">
+								<img decoding="async" width="545" height="1024"
+									src="/wp-content/uploads/2023/07/calculate-img.png"
+									class="attachment-large size-large wp-image-427" alt="">
 							</div>
 						</div>
 					</div>
@@ -1598,6 +1739,11 @@
 			const openMenuButton = document.querySelector(".j_mobile_menu .hfe-nav-menu__toggle")
 			const closeMenuButton = document.querySelector(".j_mobile_menu .hfe-flyout-close")
 
+			const calcCm = document.querySelector(".j_calculate_height")
+			const calcKg = document.querySelector(".j_calculate_weight")
+			const calcBtn = document.querySelector(".j_calculate_button .elementor-button")
+			const calcMsg = document.querySelector(".j_calculate_message .elementor-widget-container")
+
 			// Home section margin top
 			homeSection.style.marginTop = `${headerSection.offsetHeight + 70}px`
 
@@ -1613,6 +1759,32 @@
 				}, 100)
 			}
 			closeMenuButton.onclick = () => mobileMenu.classList.remove("show")
+
+			// Calculate BMI
+			const calculateBmi = event => {
+				event.preventDefault()
+				if (calcCm.value === "" || calcKg.value === "") {
+					calcMsg.innerHTML = "<p class='color-red'>Fill in the Height and Weight<\/p>"
+					setTimeout(() => calcMsg.innerHTML = "", 3000)
+				} else {
+					let cm = parseFloat(calcCm.value) / 100
+					let kg = parseFloat(calcKg.value)
+					let bmi = Math.round(kg / (cm * cm))
+
+					if (bmi < 18.5) {
+						calcMsg.innerHTML = `<p class='color-green'>Your BMI is ${bmi} and you are skinny<\/p>`
+					} else if (bmi >= 18.5 && bmi < 25) {
+						calcMsg.innerHTML = `<p class='color-green'>Your BMI is ${bmi} and you are healthy<\/p>`
+					} else {
+						calcMsg.innerHTML = `<p class='color-green'>Your BMI is ${bmi} and you are overweight<\/p>`
+					}
+
+					calcCm.value = ""
+					calcKg.value = ""
+					setTimeout(() => calcMsg.innerHTML = "", 3000)
+				}
+			}
+			calcBtn.onclick = calculateBmi
 
 			setHeaderBackground()
 			window.onscroll = setHeaderBackground</script>
