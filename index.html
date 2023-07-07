@@ -30,6 +30,7 @@
 			padding: 0 !important;
 		}
 	</style>
+	<link rel="stylesheet" id="wp-color-picker-css" href="/wp-admin/css/color-picker.min.css?ver=6.2.2" media="all">
 	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2"
 		media="all">
 	<link rel="stylesheet" id="classic-theme-styles-css" href="/wp-includes/css/classic-themes.min.css?ver=6.2.2"
@@ -385,7 +386,7 @@
 		media="all">
 	<link rel="stylesheet" id="elementor-global-css" href="/wp-content/uploads/elementor/css/global.css?ver=1688742271"
 		media="all">
-	<link rel="stylesheet" id="elementor-post-8-css" href="/wp-content/uploads/elementor/css/post-8.css?ver=1688742326"
+	<link rel="stylesheet" id="elementor-post-8-css" href="/wp-content/uploads/elementor/css/post-8.css?ver=1688756390"
 		media="all">
 	<link rel="stylesheet" id="hfe-widgets-style-css"
 		href="/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.6.14" media="all">
@@ -396,7 +397,7 @@
 	<link rel="stylesheet" id="elementor-post-19-css"
 		href="/wp-content/uploads/elementor/css/post-19.css?ver=1688744269" media="all">
 	<link rel="stylesheet" id="elementor-post-522-css"
-		href="/wp-content/uploads/elementor/css/post-522.css?ver=1688742340" media="all">
+		href="/wp-content/uploads/elementor/css/post-522.css?ver=1688756515" media="all">
 	<link rel="stylesheet" id="hello-elementor-css" href="/wp-content/themes/hello-elementor/style.min.css?ver=2.8.1"
 		media="all">
 	<link rel="stylesheet" id="hello-elementor-theme-style-css"
@@ -413,10 +414,11 @@
 	<link rel="stylesheet" id="elementor-icons-fa-brands-css"
 		href="/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3" media="all">
 	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-	<script src="/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.14.1"
-		id="font-awesome-4-shim-js"></script>
 	<script src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.4" id="jquery-core-js"></script>
 	<script src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0" id="jquery-migrate-js"></script>
+	<script src="/wp-content/plugins/scrollbar/js/jquery.nicescroll.min.js?ver=1.0" id="tpnicescroll-js-js"></script>
+	<script src="/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.14.1"
+		id="font-awesome-4-shim-js"></script>
 	<link rel="https://api.w.org/" href="/wp-json/">
 	<link rel="alternate" type="application/json" href="/wp-json/wp/v2/pages/8">
 	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
@@ -426,6 +428,19 @@
 	<link rel="shortlink" href="/">
 	<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=%2F">
 	<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=%2F#038;format=xml">
+	<script type="text/javascript">jQuery(document).ready(function () {
+			jQuery("html").niceScroll({
+				cursorcolor: '#41423d',
+				cursorwidth: '4',
+				cursorborderradius: '4px',
+				cursorborder: 'px',
+				scrollspeed: '60',
+				autohidemode: true,
+				touchbehavior: false,
+				bouncescroll: true,
+				horizrailenabled: false,
+			});
+		});</script>
 	<meta name="generator"
 		content="Elementor 3.14.1; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, a11y_improvements, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
 	<link rel="icon" href="/wp-content/uploads/2023/07/favicon-32x32-1.png" sizes="32x32">
@@ -613,6 +628,21 @@
 		/* Footer */
 		.b_newsletter_button button {
 			width: 100%
+		}
+
+		/* Scroll up button */
+		.b_scroll_up {
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		.b_scroll_up:hover {
+			transform: translateY(-10px);
+		}
+
+		.b_scroll_up.hidden {
+			bottom: 0 !important;
+			opacity: 0;
 		}
 	</style>
 </head>
@@ -950,8 +980,9 @@
 							data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;position&quot;:&quot;absolute&quot;}">
 						</div>
 					</div>
-					<div class="elementor-element elementor-element-8c98f0f e-con-full e-flex e-con" data-id="8c98f0f"
-						data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+					<div class="elementor-element elementor-element-8c98f0f e-con-full animated-slow e-flex elementor-invisible e-con"
+						data-id="8c98f0f" data-element_type="container"
+						data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;animation&quot;:&quot;fadeInRight&quot;,&quot;animation_delay&quot;:&quot;700&quot;}">
 						<div class="elementor-element elementor-element-4b9d32b elementor-widget elementor-widget-heading"
 							data-id="4b9d32b" data-element_type="widget" data-widget_type="heading.default">
 							<div class="elementor-widget-container">
@@ -1021,9 +1052,9 @@
 					</div>
 					<div class="elementor-element elementor-element-69152b7 e-con-full e-flex e-con" data-id="69152b7"
 						data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-						<div class="elementor-element elementor-element-fb380ec elementor-absolute e-transform elementor-widget elementor-widget-image"
+						<div class="elementor-element elementor-element-fb380ec elementor-absolute e-transform elementor-invisible elementor-widget elementor-widget-image"
 							data-id="fb380ec" data-element_type="widget"
-							data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_transform_translateX_effect&quot;:{&quot;unit&quot;:&quot;rem&quot;,&quot;size&quot;:&quot;-6&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_laptop&quot;:{&quot;unit&quot;:&quot;rem&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_tablet_extra&quot;:{&quot;unit&quot;:&quot;rem&quot;,&quot;size&quot;:&quot;0&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_tablet&quot;:{&quot;unit&quot;:&quot;rem&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_mobile_extra&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;50&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_mobile&quot;:{&quot;unit&quot;:&quot;rem&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_widescreen&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_widescreen&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_tablet_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
+							data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_transform_translateX_effect&quot;:{&quot;unit&quot;:&quot;rem&quot;,&quot;size&quot;:&quot;-6&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_laptop&quot;:{&quot;unit&quot;:&quot;rem&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_tablet_extra&quot;:{&quot;unit&quot;:&quot;rem&quot;,&quot;size&quot;:&quot;0&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_tablet&quot;:{&quot;unit&quot;:&quot;rem&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_mobile_extra&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;50&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateX_effect_mobile&quot;:{&quot;unit&quot;:&quot;rem&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:&quot;400&quot;,&quot;_transform_translateX_effect_widescreen&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_widescreen&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_tablet_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_translateY_effect_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
 							data-widget_type="image.default">
 							<div class="elementor-widget-container">
 								<img decoding="async" width="800" height="692"
@@ -1037,29 +1068,37 @@
 			<div class="elementor-element elementor-element-85846ef e-flex e-con-boxed e-con" data-id="85846ef"
 				data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
 				<div class="e-con-inner">
-					<div class="elementor-element elementor-element-40ac572 elementor-widget elementor-widget-image"
-						data-id="40ac572" data-element_type="widget" data-widget_type="image.default">
+					<div class="elementor-element elementor-element-40ac572 elementor-invisible elementor-widget elementor-widget-image"
+						data-id="40ac572" data-element_type="widget"
+						data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:&quot;1000&quot;}"
+						data-widget_type="image.default">
 						<div class="elementor-widget-container">
 							<img decoding="async" width="250" height="70" src="/wp-content/uploads/2023/07/logo1.png"
 								class="attachment-large size-large wp-image-197" alt="">
 						</div>
 					</div>
-					<div class="elementor-element elementor-element-27b5a30 elementor-widget elementor-widget-image"
-						data-id="27b5a30" data-element_type="widget" data-widget_type="image.default">
+					<div class="elementor-element elementor-element-27b5a30 elementor-invisible elementor-widget elementor-widget-image"
+						data-id="27b5a30" data-element_type="widget"
+						data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:&quot;1300&quot;}"
+						data-widget_type="image.default">
 						<div class="elementor-widget-container">
 							<img decoding="async" width="250" height="70" src="/wp-content/uploads/2023/07/logo2.png"
 								class="attachment-large size-large wp-image-198" alt="">
 						</div>
 					</div>
-					<div class="elementor-element elementor-element-27af398 elementor-widget elementor-widget-image"
-						data-id="27af398" data-element_type="widget" data-widget_type="image.default">
+					<div class="elementor-element elementor-element-27af398 elementor-invisible elementor-widget elementor-widget-image"
+						data-id="27af398" data-element_type="widget"
+						data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:&quot;1600&quot;}"
+						data-widget_type="image.default">
 						<div class="elementor-widget-container">
 							<img decoding="async" width="250" height="70" src="/wp-content/uploads/2023/07/logo3.png"
 								class="attachment-large size-large wp-image-199" alt="">
 						</div>
 					</div>
-					<div class="elementor-element elementor-element-ad669d0 elementor-widget elementor-widget-image"
-						data-id="ad669d0" data-element_type="widget" data-widget_type="image.default">
+					<div class="elementor-element elementor-element-ad669d0 elementor-invisible elementor-widget elementor-widget-image"
+						data-id="ad669d0" data-element_type="widget"
+						data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:&quot;1900&quot;}"
+						data-widget_type="image.default">
 						<div class="elementor-widget-container">
 							<img decoding="async" width="250" height="70" src="/wp-content/uploads/2023/07/logo4.png"
 								class="attachment-large size-large wp-image-200" alt="">
@@ -1092,9 +1131,9 @@
 					</div>
 					<div class="elementor-element elementor-element-acc5cc5 e-con-full e-flex e-con" data-id="acc5cc5"
 						data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-						<div class="elementor-element elementor-element-0125c00 e-con-full b_program_card e-flex e-con"
+						<div class="elementor-element elementor-element-0125c00 e-con-full b_program_card e-flex elementor-invisible e-con"
 							data-id="0125c00" data-element_type="container"
-							data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+							data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:&quot;400&quot;}">
 							<div class="elementor-element elementor-element-8933865 e-con-full b_program_shape e-flex e-con"
 								data-id="8933865" data-element_type="container"
 								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1135,9 +1174,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="elementor-element elementor-element-a4305ac e-con-full b_program_card e-flex e-con"
+						<div class="elementor-element elementor-element-a4305ac e-con-full b_program_card e-flex elementor-invisible e-con"
 							data-id="a4305ac" data-element_type="container"
-							data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+							data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:&quot;500&quot;}">
 							<div class="elementor-element elementor-element-fa1d34e e-con-full b_program_shape e-flex e-con"
 								data-id="fa1d34e" data-element_type="container"
 								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1177,9 +1216,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="elementor-element elementor-element-44d40e8 e-con-full b_program_card e-flex e-con"
+						<div class="elementor-element elementor-element-44d40e8 e-con-full b_program_card e-flex elementor-invisible e-con"
 							data-id="44d40e8" data-element_type="container"
-							data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+							data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:&quot;600&quot;}">
 							<div class="elementor-element elementor-element-f5f8640 e-con-full b_program_shape e-flex e-con"
 								data-id="f5f8640" data-element_type="container"
 								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1220,9 +1259,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="elementor-element elementor-element-a954a6f e-con-full b_program_card e-flex e-con"
+						<div class="elementor-element elementor-element-a954a6f e-con-full b_program_card e-flex elementor-invisible e-con"
 							data-id="a954a6f" data-element_type="container"
-							data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+							data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:&quot;700&quot;}">
 							<div class="elementor-element elementor-element-b755d46 e-con-full b_program_shape e-flex e-con"
 								data-id="b755d46" data-element_type="container"
 								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1268,8 +1307,9 @@
 			<div class="elementor-element elementor-element-43b1ed2 e-flex e-con-boxed e-con" data-id="43b1ed2"
 				data-element_type="container" id="choose" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
 				<div class="e-con-inner">
-					<div class="elementor-element elementor-element-1337ec1 e-con-full e-flex e-con" data-id="1337ec1"
-						data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+					<div class="elementor-element elementor-element-1337ec1 e-con-full e-flex elementor-invisible e-con"
+						data-id="1337ec1" data-element_type="container"
+						data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;animation_delay&quot;:&quot;700&quot;}">
 						<div class="elementor-element elementor-element-e48ac91 e-con-full e-flex e-con"
 							data-id="e48ac91" data-element_type="container"
 							data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
@@ -1373,8 +1413,10 @@
 								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;position&quot;:&quot;absolute&quot;}">
 							</div>
 						</div>
-						<div class="elementor-element elementor-element-d14428b elementor-widget elementor-widget-image"
-							data-id="d14428b" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-element elementor-element-d14428b elementor-invisible elementor-widget elementor-widget-image"
+							data-id="d14428b" data-element_type="widget"
+							data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:&quot;400&quot;}"
+							data-widget_type="image.default">
 							<div class="elementor-widget-container">
 								<img decoding="async" width="775" height="1024"
 									src="/wp-content/uploads/2023/07/choose-img.png"
@@ -1410,9 +1452,9 @@
 					<div class="elementor-element elementor-element-93db13e e-flex e-con-boxed e-con" data-id="93db13e"
 						data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
 						<div class="e-con-inner">
-							<div class="elementor-element elementor-element-23b7294 e-con-full e-flex e-con"
+							<div class="elementor-element elementor-element-23b7294 e-con-full e-flex elementor-invisible e-con"
 								data-id="23b7294" data-element_type="container"
-								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:&quot;400&quot;}">
 								<div class="elementor-element elementor-element-7319183 e-con-full e-flex e-con"
 									data-id="7319183" data-element_type="container"
 									data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1487,9 +1529,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="elementor-element elementor-element-67c3e00 e-con-full b_pricing_card_active e-flex e-con"
+							<div class="elementor-element elementor-element-67c3e00 e-con-full b_pricing_card_active e-flex elementor-invisible e-con"
 								data-id="67c3e00" data-element_type="container"
-								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:&quot;500&quot;}">
 								<div class="elementor-element elementor-element-f0c8c21 e-con-full e-flex e-con"
 									data-id="f0c8c21" data-element_type="container"
 									data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1562,9 +1604,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="elementor-element elementor-element-c66b13b e-con-full e-flex e-con"
+							<div class="elementor-element elementor-element-c66b13b e-con-full e-flex elementor-invisible e-con"
 								data-id="c66b13b" data-element_type="container"
-								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+								data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;zoomIn&quot;,&quot;animation_delay&quot;:&quot;600&quot;}">
 								<div class="elementor-element elementor-element-418cc16 e-con-full e-flex e-con"
 									data-id="418cc16" data-element_type="container"
 									data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1644,8 +1686,9 @@
 			<div class="elementor-element elementor-element-bd4f3cf e-flex e-con-boxed e-con" data-id="bd4f3cf"
 				data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
 				<div class="e-con-inner">
-					<div class="elementor-element elementor-element-6dd30ba e-con-full e-flex e-con" data-id="6dd30ba"
-						data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+					<div class="elementor-element elementor-element-6dd30ba e-con-full e-flex elementor-invisible e-con"
+						data-id="6dd30ba" data-element_type="container"
+						data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;animation&quot;:&quot;fadeInRight&quot;,&quot;animation_delay&quot;:&quot;700&quot;}">
 						<div class="elementor-element elementor-element-08b4ff9 elementor-widget__width-auto b_title elementor-widget elementor-widget-heading"
 							data-id="08b4ff9" data-element_type="widget" data-widget_type="heading.default">
 							<div class="elementor-widget-container">
@@ -1709,8 +1752,10 @@
 					</div>
 					<div class="elementor-element elementor-element-6a8bdf3 e-con-full e-flex e-con" data-id="6a8bdf3"
 						data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
-						<div class="elementor-element elementor-element-c0772d7 elementor-widget elementor-widget-image"
-							data-id="c0772d7" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-element elementor-element-c0772d7 elementor-invisible elementor-widget elementor-widget-image"
+							data-id="c0772d7" data-element_type="widget"
+							data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:&quot;400&quot;}"
+							data-widget_type="image.default">
 							<div class="elementor-widget-container">
 								<img decoding="async" width="545" height="1024"
 									src="/wp-content/uploads/2023/07/calculate-img.png"
@@ -2349,6 +2394,19 @@
 							</div>
 						</div>
 					</div>
+					<div class="elementor-element elementor-element-f8bd608 e-con-full b_scroll_up j_scroll_up hidden e-flex e-con"
+						data-id="f8bd608" data-element_type="container"
+						data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;position&quot;:&quot;fixed&quot;}">
+						<div class="elementor-element elementor-element-7f4c31b elementor-view-default elementor-widget elementor-widget-icon"
+							data-id="7f4c31b" data-element_type="widget" data-widget_type="icon.default">
+							<div class="elementor-widget-container">
+								<div class="elementor-icon-wrapper">
+									<a class="elementor-icon" href="#home">
+										<i aria-hidden="true" class="fas fa-arrow-up"></i> </a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</footer>
@@ -2360,6 +2418,8 @@
 		href="/wp-content/plugins/metform/public/assets/css/metform-ui.css?ver=3.3.3" media="all">
 	<link rel="stylesheet" id="metform-style-css"
 		href="/wp-content/plugins/metform/public/assets/css/style.css?ver=3.3.3" media="all">
+	<link rel="stylesheet" id="e-animations-css"
+		href="/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.14.1" media="all">
 	<script src="/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0"
 		id="hello-theme-frontend-js"></script>
 	<script src="/wp-content/plugins/header-footer-elementor/inc/js/frontend.js?ver=1.6.14"
@@ -2400,6 +2460,8 @@
 		const calcBtn = document.querySelector(".j_calculate_button .elementor-button")
 		const calcMsg = document.querySelector(".j_calculate_message .elementor-widget-container")
 
+		const scrollUpBtn = document.querySelector(".j_scroll_up")
+
 		// Home section margin top
 		homeSection.style.paddingTop = `${headerSection.offsetHeight + 70}px`
 
@@ -2417,7 +2479,7 @@
 		closeMenuButton.onclick = () => mobileMenu.classList.remove("show")
 
 		// Calculate BMI
-		const calculateBmi = event => {
+		calcBtn.onclick = event => {
 			event.preventDefault()
 			if (calcCm.value === "" || calcKg.value === "") {
 				calcMsg.innerHTML = "<p class='color-red'>Fill in the Height and Weight<\/p>"
@@ -2440,10 +2502,18 @@
 				setTimeout(() => calcMsg.innerHTML = "", 3000)
 			}
 		}
-		calcBtn.onclick = calculateBmi
+
+		// Scroll up button
+		const revealScrollUpBtn = () => window.scrollY > 0
+			? scrollUpBtn.classList.remove("hidden")
+			: scrollUpBtn.classList.add("hidden")
 
 		setHeaderBackground()
-		window.onscroll = setHeaderBackground</script>
+
+		window.onscroll = () => {
+			setHeaderBackground()
+			revealScrollUpBtn()
+		}</script>
 </body>
 
 </html>
