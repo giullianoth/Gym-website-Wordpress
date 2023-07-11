@@ -14,7 +14,11 @@ Este projeto consiste no layout de um site fictício para uma rede de academias.
 
 ## Conteúdo | Content
 
-< conteúdo >
+- [Status do projeto | Project status](#status-do-projeto--project-status)
+- [Layout](#layout)
+- [Ferramentas utilizadas | Tools used](#ferramentas-utilizadas--tools-used)
+- [Como baixar e instalar | How to download and install](#como-baixar-e-instalar--how-to-download-and-install)
+- [Autor | Author](#autor--author)
 
 ## Status do projeto | Project status
 
@@ -78,7 +82,7 @@ Apesar de o projeto ter sido construído no CMS, alguns códigos CSS e JavaScrip
 
 *Although the project was built on the CMS, some CSS and JavaScript codes were implemented for customization purposes.*
 
-## Como instalar | How to install
+## Como baixar e instalar | How to download and install
 
 **Atenção:** o código contido neste repositório é uma versão estática gerada pelo WordPress, não sendo possível sua importação no painel administrativo desse CMS.
 
