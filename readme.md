@@ -1,5 +1,10 @@
 # Gym Responsive Website - Web Design Project
 
+< gif >
+
+[![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat&logo=wordpress&logoColor=white)](https://br.wordpress.org/)
+[![Elementor](https://img.shields.io/badge/Elementor-92003B?style=flat&logo=elementor&logoColor=white)](https://elementor.com/)
+
 ---
 **Disponível em | _Avaliable in_: Português - BR | _English_**
 
@@ -23,19 +28,19 @@ Construído a partir do método *desktop-first*, o projeto é responsivo, ou sej
 
 *Built from the desktop-first method, the project is responsive, that is, it is adaptable to the most varied sizes and screen resolutions, as shown below.*
 
-![Captura de tela em 1440px | Screenshot in 1440px](assets/images/screenshots/Screenshot-1440px.png)
+![Captura de tela em 1440px | Screenshot in 1440px](wp-content/uploads/2023/07/Screenshot-1440px.png)
 
 Captura de tela em 1440px | Screenshot in 1440px
 
 ---
 
-![Captura de tela em 768px | Screenshot in 768px](assets/images/screenshots/Screenshot-768px.png)
+![Captura de tela em 768px | Screenshot in 768px](wp-content/uploads/2023/07/Screenshot-768px.png)
 
 Captura de tela em 768px | Screenshot in 768px
 
 ---
 
-![Captura de tela em 375px | Screenshot in 375px](assets/images/screenshots/Screenshot-375px.png)
+![Captura de tela em 375px | Screenshot in 375px](wp-content/uploads/2023/07/Screenshot-375px.png)
 
 Captura de tela em 375px | Screenshot in 375px
 
